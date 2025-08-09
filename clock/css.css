@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: fantasy, Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+#date {
+    margin-top: 70px;
+    width:400px;
+    height: 50px;
+    font-size: 50px;
+    text-align: center;
+    color: #474747;
+}
+
+#time {
+    margin-top: 10px;
+    width:400px;
+    height: 120px;
+    font-size: 120px;
+    text-align: center;
+    color: #000000;
+}
+
+#wek {
+    margin-top: 20px;
+    width:400px;
+    text-align: center;
+    height: 70px;
+    font-size: 70px;
+    color: #474747;
+}

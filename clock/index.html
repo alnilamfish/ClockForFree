@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css.css">
+  </head>
+
+  <body>
+    <div id="date"></div>
+    <div id="time"></div>
+    <div id="wek"></div>
+    <p>
+      <script>
+        const date = document.getElementById("date");
+        var day_list = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        
+        function updateDate() {
+          let newDate = new Date();
+          let hour = newDate.getHours();
+          let mins = newDate.getMinutes();
+          let week = newDate.getDay();
+          let month = newDate.getMonth() + 1; // 月份是從 0 開始的
+          let day = newDate.getDate();
+
+          let clockJSRead = ` ${String(hour).padStart(2, 0)}:${String(mins).padStart(2,   0)}`;
+          let wk=`${day_list[week]}`;
+          let dateStr = `${String(month).padStart(2, '0')}/${String(day).padStart(2, '0')}`;
+
+          time.textContent = clockJSRead;
+          wek.textContent = wk;
+          date.textContent = dateStr;
+        }
+        setInterval(updateDate, 1000);
+        updateDate();
+      </script>
+    </p>
+    <img src="./背景圖.png" alt="背景圖片">
+  </body>
+</html>
